@@ -1,6 +1,6 @@
 # Financial AI Assistant (Hybrid RAG & Text-to-SQL)
 
-> Trợ lý AI phân tích tài chính chuyên sâu cấp doanh nghiệp, kết hợp **Text-to-SQL trên PostgreSQL/SQLite** (dữ liệu định lượng XBRL chính thức) và **Parent-Document Hybrid RAG trên ChromaDB & BM25** (thuyết minh định tính Form 10-K) cho 3 tập đoàn công nghệ lớn: **Apple (AAPL)**, **Microsoft (MSFT)** và **NVIDIA (NVDA)** từ SEC EDGAR.
+> Trợ lý AI phân tích tài chính theo kiến trúc **Production-Oriented Hybrid RAG & Text-to-SQL**, kết hợp **Text-to-SQL trên PostgreSQL/SQLite** (dữ liệu định lượng XBRL chính thức) và **Parent-Document Hybrid RAG trên ChromaDB & BM25** (thuyết minh định tính Form 10-K) cho 3 tập đoàn công nghệ lớn: **Apple (AAPL)**, **Microsoft (MSFT)** và **NVIDIA (NVDA)** từ SEC EDGAR.
 
 ---
 
@@ -50,7 +50,7 @@ Deterministic Intent Router (Regex & Financial Keyword Rules)
    * Kết hợp độ nhạy ngữ nghĩa (Semantic search) của Dense Retriever với khả năng bắt chính xác thuật ngữ/từ khóa tài chính đặc thù (BM25 lexical search: EBITDA, CapEx, H100, 10-K). Hợp nhất kết quả bằng thuật toán RRF không tham số (`k=60`).
 4. **Cross-Scoring Reranker & Safe Text-to-SQL**:
    * Tái xếp hạng các ứng viên dựa trên mật độ từ khóa truy vấn cốt lõi.
-   * Bộ thực thi SQL tích hợp bộ kiểm tra tĩnh AST ([`SQLValidator`](file:///d:/financial-rag-ai-assistant/src/financial_ai/text2sql/validator.py)) chặn 100% các câu lệnh can thiệp cấu trúc dữ liệu (`SELECT`-only) và tự động ép `LIMIT 100`.
+   * Bộ thực thi SQL tích hợp bộ kiểm tra tĩnh AST ([`SQLValidator`](src/financial_ai/text2sql/validator.py)) chặn 100% các câu lệnh can thiệp cấu trúc dữ liệu (`SELECT`-only) và tự động ép `LIMIT 100`.
 
 ---
 
@@ -99,7 +99,7 @@ pytest tests/ -v
 
 ## 4. Đánh Giá Thế Nào? (Evaluation & Metrics)
 
-Hệ thống được đánh giá thực nghiệm định lượng ở cả 2 khía cạnh: **Năng lực truy xuất thông tin (IR Metrics)** và **Hiệu quả vận hành (Operational Metrics)** thông qua công cụ đo lường chuẩn [`scripts/benchmark_ir_ops.py`](file:///d:/financial-rag-ai-assistant/scripts/benchmark_ir_ops.py) trên tập kiểm thử báo cáo SEC 10-K:
+Hệ thống được đánh giá thực nghiệm định lượng ở cả 2 khía cạnh: **Năng lực truy xuất thông tin (IR Metrics)** và **Hiệu quả vận hành (Operational Metrics)** thông qua công cụ đo lường chuẩn [`scripts/benchmark_ir_ops.py`](scripts/benchmark_ir_ops.py) trên tập kiểm thử báo cáo SEC 10-K:
 
 ### 📊 Bảng Chỉ Số Đo Lường Truy Xuất (Information Retrieval - IR Metrics)
 
