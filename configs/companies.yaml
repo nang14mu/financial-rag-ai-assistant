@@ -1,0 +1,34 @@
+companies:
+  AAPL:
+    ticker: "AAPL"
+    cik: "0000320193"
+    name: "Apple Inc."
+    sector: "Technology"
+    industry: "Consumer Electronics"
+    fiscal_year_end_month: 9  # Ends late September
+    default_dimensions:
+      product_lines: ["iPhone", "Mac", "iPad", "Wearables, Home and Accessories", "Services"]
+      geographic_regions: ["Americas", "Europe", "Greater China", "Japan", "Rest of Asia Pacific"]
+
+  MSFT:
+    ticker: "MSFT"
+    cik: "0000789019"
+    name: "Microsoft Corporation"
+    sector: "Technology"
+    industry: "Software & Cloud Services"
+    fiscal_year_end_month: 6  # Ends June 30
+    default_dimensions:
+      business_segments: ["Productivity and Business Processes", "Intelligent Cloud", "More Personal Computing"]
+      geographic_regions: ["United States", "Other countries"]
+
+  NVDA:
+    ticker: "NVDA"
+    cik: "0001045810"
+    name: "NVIDIA Corporation"
+    sector: "Technology"
+    industry: "Semiconductors & AI Hardware"
+    fiscal_year_end_month: 1  # Ends late January of following calendar year
+    default_dimensions:
+      business_segments: ["Compute & Networking", "Graphics"]
+      market_platforms: ["Data Center", "Gaming", "Professional Visualization", "Automotive"]
+      geographic_regions: ["United States", "Taiwan", "China", "Other Countries"]

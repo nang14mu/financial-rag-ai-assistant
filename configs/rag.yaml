@@ -1,0 +1,32 @@
+chunking:
+  # Hierarchical Parent-Document Chunking
+  parent_subsection_threshold: 1500  # If subsection <= 1500 tokens, keep intact as 1 Parent Chunk
+  parent_chunk_min_tokens: 800       # Target 800-1500 tokens for Parent Chunks
+  parent_chunk_max_tokens: 1500
+  child_chunk_tokens: 180            # Target 150-200 tokens for Child Chunks (under all-MiniLM 256 limit)
+  child_overlap_tokens: 35           # Overlap 30-40 tokens for Child Chunks
+  parent_store_path: "./data/chroma_db/parent_store.sqlite"
+
+  # Legacy compatibility parameters
+  subsection_threshold: 1500
+  chunk_min_tokens: 800
+  chunk_max_tokens: 1500
+  overlap_tokens: 60
+  overlap_full_paragraph: true
+  avoid_cutting_paragraph: true
+  flush_on_heading_change: true
+  risk_factor_single_chunk: true
+  mda_primary_topics:
+    - "Revenue"
+    - "Gross Margin"
+    - "Operating Expenses"
+    - "Research and Development"
+    - "Liquidity and Capital Resources"
+    - "Results of Operations"
+
+retrieval:
+  top_k_dense: 6
+  score_threshold: 0.35
+  persist_directory: "./data/chroma_db"
+  collection_name: "sec_10k_filings"
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"

@@ -1,0 +1,28 @@
+{
+  "router": {
+    "total_queries": 8,
+    "overall_accuracy": 1.0,
+    "per_class_accuracy": {
+      "SQL_ONLY": 1.0,
+      "RAG_ONLY": 1.0,
+      "HYBRID": 1.0
+    }
+  },
+  "sql": {
+    "total_queries": 4,
+    "valid_syntax_rate": 1.0,
+    "execution_success_rate": 1.0,
+    "data_retrieval_rate": 1.0
+  },
+  "rag": {
+    "total_queries": 3,
+    "keyword_hit_rate": 1.0,
+    "section_precision": 1.0
+  },
+  "hybrid": {
+    "total_queries": 2,
+    "sql_evidence_rate": 1.0,
+    "rag_evidence_rate": 1.0,
+    "full_evidence_rate": 1.0
+  }
+}

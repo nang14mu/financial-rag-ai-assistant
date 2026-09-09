@@ -1,0 +1,96 @@
+# ==========================================
+# Environment variables & secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Byte-compiled / optimized / DLL files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions
+*.obj
+*.dll
+*.dylib
+
+# ==========================================
+# Distribution / packaging
+# ==========================================
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+# Virtual environments
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ==========================================
+# Unit test / coverage / linter caches
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.hypothesis/
+
+# ==========================================
+# IDE & OS specific files
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# Local Data, Databases & Vector Stores
+# ==========================================
+# Local SQLite / DuckDB databases
+*.db
+*.sqlite
+*.sqlite3
+!data/eval/**
+
+# Heavy raw and processed filing data
+data/raw/
+data/processed/
+data/chroma_db/
+chroma_db/
+
+# Pickled models / BM25 indexes
+*.pkl
+*.pickle
+
+# Logs
+logs/
+*.log

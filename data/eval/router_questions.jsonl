@@ -1,0 +1,8 @@
+{"query": "Doanh thu của Apple năm 2024 đạt bao nhiêu USD?", "expected_route": "SQL_ONLY", "tickers": ["AAPL"], "primary_metric": "total_revenue"}
+{"query": "So sánh Net Income của NVDA và MSFT qua 3 năm gần nhất", "expected_route": "SQL_ONLY", "tickers": ["NVDA", "MSFT"], "primary_metric": "net_income"}
+{"query": "Biên lợi nhuận gộp Gross Margin của NVIDIA năm 2024 là bao nhiêu phần trăm?", "expected_route": "SQL_ONLY", "tickers": ["NVDA"], "primary_metric": "gross_margin_pct"}
+{"query": "Các yếu tố rủi ro chính về chuỗi cung ứng được Apple cảnh báo trong Item 1A là gì?", "expected_route": "RAG_ONLY", "tickers": ["AAPL"], "section": "Item 1A"}
+{"query": "Chiến lược phát triển sản phẩm AI và Copilot của Microsoft được nêu trong Item 1 như thế nào?", "expected_route": "RAG_ONLY", "tickers": ["MSFT"], "section": "Item 1"}
+{"query": "NVIDIA mô tả sự cạnh tranh trong thị trường chip trung tâm dữ liệu ra sao?", "expected_route": "RAG_ONLY", "tickers": ["NVDA"], "section": "Item 1"}
+{"query": "Doanh thu mảng Data Center của NVIDIA tăng trưởng bao nhiêu trong năm 2024 và ban lãnh đạo giải thích nguyên nhân do đâu trong MD&A?", "expected_route": "HYBRID", "tickers": ["NVDA"], "primary_metric": "revenue", "section": "Item 7"}
+{"query": "So sánh chi phí R&D của Apple và Microsoft trong năm 2023 và định hướng nghiên cứu phát triển được công bố trong 10-K", "expected_route": "HYBRID", "tickers": ["AAPL", "MSFT"], "primary_metric": "research_and_development", "section": "Item 7"}

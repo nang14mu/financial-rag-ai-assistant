@@ -1,0 +1,4 @@
+{"query": "Doanh thu của Apple năm 2023 và 2024", "expected_sql": "SELECT fiscal_year, total_revenue FROM v_annual_financial_summary WHERE ticker = 'AAPL' AND fiscal_year IN (2023, 2024) ORDER BY fiscal_year;", "ticker": "AAPL"}
+{"query": "Net Income của NVIDIA năm 2024 và 2025", "expected_sql": "SELECT fiscal_year, net_income FROM v_annual_financial_summary WHERE ticker = 'NVDA' ORDER BY fiscal_year DESC LIMIT 2;", "ticker": "NVDA"}
+{"query": "Biên lợi nhuận gộp của Microsoft qua 3 năm gần nhất", "expected_sql": "SELECT fiscal_year, gross_margin_pct FROM v_growth_and_margins WHERE ticker = 'MSFT' ORDER BY fiscal_year DESC LIMIT 3;", "ticker": "MSFT"}
+{"query": "Doanh thu mảng Data Center của NVIDIA", "expected_sql": "SELECT fiscal_year, revenue FROM v_segment_revenue WHERE ticker = 'NVDA' AND dimension_name = 'Data Center' ORDER BY fiscal_year DESC;", "ticker": "NVDA"}

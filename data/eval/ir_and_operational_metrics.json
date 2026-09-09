@@ -1,0 +1,25 @@
+{
+  "retrieval_metrics": {
+    "Recall@1": 0.225,
+    "Recall@3": 0.55,
+    "Recall@5": 0.8,
+    "Precision@1": 0.7,
+    "Precision@3": 0.5667,
+    "Precision@5": 0.48,
+    "MRR": 0.725,
+    "NDCG@3": 0.6061,
+    "NDCG@5": 0.7339
+  },
+  "latency_metrics_ms": {
+    "Routing_Mean": 0.23,
+    "Retrieval_Mean": 188.35,
+    "LLM_Generation_Mean": 26175.26,
+    "End_to_End_Total_Mean": 44117.28
+  },
+  "cost_and_tokens": {
+    "Avg_Input_Tokens": 3564,
+    "Avg_Output_Tokens": 250,
+    "Cost_Per_Query_USD": 0.000342,
+    "Cost_Per_1000_Queries_USD": 0.3423
+  }
+}
