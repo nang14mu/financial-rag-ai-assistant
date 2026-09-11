@@ -91,7 +91,7 @@ uvicorn financial_ai.api.main:app --reload --port 8000
 
 ### Bước 4: Chạy kiểm thử tự động
 ```bash
-# Chạy toàn bộ 21 automated unit tests
+# Chạy toàn bộ 24 automated unit tests
 pytest tests/ -v
 ```
 
